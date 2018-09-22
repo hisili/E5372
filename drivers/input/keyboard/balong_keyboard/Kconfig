@@ -1,0 +1,5 @@
+config BALONG_KEYBOARD_GPIO
+	tristate "Balong GPIO Buttons"
+	depends on ARCH_BALONG && GPIO_BALONG
+	help
+	  Balong gpio for E5

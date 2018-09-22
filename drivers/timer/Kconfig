@@ -1,0 +1,10 @@
+#
+# balong timer drivers
+#
+
+comment "balong timer drivers"
+	  
+config BALONG_TIMER
+	tristate "balong timer support"
+	help
+	Support for the Hisilicon Balong timer.

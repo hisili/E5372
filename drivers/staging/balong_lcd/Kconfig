@@ -1,0 +1,5 @@
+config BALONG_LCD_SPI
+	tristate "Balong LCD Driver via SPI"
+	default N
+	---help---
+	  Enable support for the LCD display in Balong platform.

@@ -1,0 +1,10 @@
+#
+# balong dmac drivers
+#
+
+comment "balong dmac drivers"
+	  
+config BALONG_DMAC
+	tristate "balong dmac support"
+	help
+	Support for the Hisilicon Balong dmac.

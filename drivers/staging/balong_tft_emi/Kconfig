@@ -1,0 +1,5 @@
+config BALONG_TFT_EMI
+	tristate "Balong TFT driver via EMI Bus"
+	default N
+	---help---
+	  Enable support for the TFT display via EMI bus in Balong platform.

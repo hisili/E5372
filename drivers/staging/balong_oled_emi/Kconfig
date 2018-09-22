@@ -1,0 +1,5 @@
+config BALONG_OLED_EMI
+	tristate "Balong OLED driver via EMI Bus"
+	default N
+	---help---
+	  Enable support for the OLED display via EMI bus in Balong platform.

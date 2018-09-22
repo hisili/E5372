@@ -1,0 +1,10 @@
+#
+# Multicore PMU drivers
+#
+
+comment "Multicore PMU drivers"
+
+config PMU_ACORE
+	tristate "Multicore pmu support"
+	help
+	  Multicore pmu drivers

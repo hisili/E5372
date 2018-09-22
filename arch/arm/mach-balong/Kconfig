@@ -1,0 +1,117 @@
+if ARCH_BALONG
+choice
+	prompt "Hisilicon SoC types"
+	default ARCH_SOC_VERSION_P500_C00
+
+config ARCH_SOC_VERSION_V3R2_C00
+	bool "SOC_VERSION_V3R2_C00"
+	select CPU_V7
+	select ARM_GIC
+	help
+	  Support for Hisilicon(R) SoC VERSION_V3R2_C00.
+
+config ARCH_SOC_VERSION_V3R2_ES
+	bool "SOC_VERSION_V3R2_ES"
+	select CPU_V7
+	select ARM_GIC
+	help
+	  Support for Hisilicon(R) SoC VERSION_V3R2_ES.
+ 
+config ARCH_SOC_VERSION_P500_C00
+	bool "SOC_VERSION_P500_C00"
+	select CPU_V7
+	select ARM_GIC
+	help
+	  Support for Hisilicon(R) SoC VERSION_P500_C00.
+
+config ARCH_SOC_VERSION_V7R1_C00
+        bool "SOC_VERSION_V7R1_C00"
+        select CPU_V7
+        select ARM_GIC
+        help
+          Support for Hisilicon(R) SoC VERSION_V7R1_C00.        
+	 
+
+endchoice
+
+choice
+	prompt "Hisilicon Balong Board Type"
+	default MACH_
+
+config MACH_BOARD_SFT
+	select HAS_BALONG_DEBUG_UART_PHYS
+	select ARCH_WANT_OPTIONAL_GPIOLIB
+	bool "BALONGBOARD_SFT"
+	help
+	  Support for the Hisilicon Balong SFT V100R001 board.
+
+config MACH_BOARD_FPGA
+	select HAS_BALONG_DEBUG_UART_PHYS
+	select ARCH_WANT_OPTIONAL_GPIOLIB
+	bool "BALONGBOARD_FPGA"
+	help
+	  Support for the Hisilicon Balong FPGA V100R001 board.
+
+config MACH_BOARD_ES
+	select HAS_BALONG_DEBUG_UART_PHYS
+	select ARCH_WANT_OPTIONAL_GPIOLIB
+	bool "BALONGBOARD_ES"
+	help
+	  Support for the Hisilicon Balong V300R002 ES board.
+
+endchoice
+
+config BALONG_MULTICORE
+	bool "balong mutilcore support"
+	help
+	Support for the Hisilicon Balong mutilcore.
+
+config BALONG_MULTICORE_TEST
+	bool "balong mutilcore test support"
+	help
+	Support for the Hisilicon Balong mutilcore test.
+
+
+config BALONG_EASY_SHELL
+	bool "balong easy shell(ecall) support"
+	default y
+	help
+	Support for the Hisilicon Balong easy shell.
+
+config BALONG_OM
+	bool "balong om support"
+	help
+	Support for the Hisilicon Balong OM team interface.
+
+config BALONG_MEMORY_SPINLOCK
+	bool "balong memory spinlock support"
+	default y 
+	help
+	Support for the Hisilicon Balong p500 smp cpu memory spinlock.
+
+config HAS_BALONG_DEBUG_UART_PHYS
+	bool
+
+if HAS_BALONG_DEBUG_UART_PHYS
+choice
+	prompt "Debug UART"
+
+	default BALONG_DEBUG_UART_NONE
+
+	config BALONG_DEBUG_UART_NONE
+		bool "NONE"
+
+	config BALONG_DEBUG_UART0
+		bool "UART0"
+
+	config BALONG_DEBUG_UART1
+		bool "UART1"
+
+	config BALONG_DEBUG_UART2
+		bool "UART2"
+		
+	config BALONG_DEBUG_UART3
+		bool "UART3"
+endchoice
+endif
+endif

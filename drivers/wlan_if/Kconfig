@@ -1,0 +1,15 @@
+#
+# WLAN subsystem configuration
+#
+
+
+config WLAN_IF
+	bool "wlan interface"
+	help
+	      wlan interface
+config WLAN_IF_BCM43239
+	bool "wlan interface"
+	default y
+	depends on WLAN_IF
+	help
+	      wlan interface

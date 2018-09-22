@@ -1,0 +1,15 @@
+menuconfig LED_DRV
+	bool "LED_DRV Support"
+	help
+	  Say Y to enable Linux LED_DRV support.  This allows control of supported
+	  LED_DRV from both userspace and optionally, by kernel events.
+
+if LED_DRV
+
+config LED_DRV
+	tristate "LED Default ON"
+	help
+	  This allows LED_DRV to be initialised in the ON state.
+	  If unsure, say Y.
+	  
+endif # CONNECTOR

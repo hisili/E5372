@@ -1,0 +1,5 @@
+config BALONG_OLED
+	tristate "Balong OLED driver"
+	default N
+	---help---
+	  Enable support for the OLED display in Balong platform.

@@ -1,0 +1,2 @@
+WLAN_AllComponentPaths=src/shared/bcmwifi src/wl/clm src/wl/lwip
+WLAN_GenDir=generated
